@@ -1,45 +1,38 @@
-# Real Estate Chatbot - Backend
- Django REST API for real estate data analysis.
- ## Setup
- 1. Create virtual environment:
- ```bash
- python -m venv venv
- source venv/bin/activate
- ```
- 2. Install dependencies:
- ```bash
- pip install -r requirements.txt
- ```
- 3. Run migrations:
- ```bash
- python manage.py migrate
- ```
- 4. Start server:
- ```bash
- python manage.py runserver
- ```
- ## API Documentation
- ### Upload File
- **POST** `/api/upload/`
- Upload Excel file with real estate data.
- ### Analyze Query
- **POST** `/api/analyze/`
- Body:
- ```json
- {
- "query": "Analyze Wakad"
- }
- ```
- Response:
- ```json
- {
-  "summary": "...",
-  "chart_data": [...],
-  "table_data": [...],
-  "query_type": "single"
- }
- ```
- ## Running Tests
- ```bash
- python manage.py test
- ```
+Real Estate Analysis Chatbot
+A full-stack web application for analyzing real estate data using natural language queries.
+
+Tech Stack
+Backend: Django 4.2, Django REST Framework, Pandas
+Frontend: React 18, Recharts, Axios, Lucide Icons
+Database: SQLite (default)
+Features
+🏠 Natural language query processing
+📊 Interactive data visualizations
+📈 Price trend analysis
+🔄 Area comparison
+📁 Excel file upload support
+💬 Chat-based interface
+Quick Start
+Backend Setup
+cd backend
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+Frontend Setup
+cd frontend
+npm install
+npm start
+Sample Queries
+"Analyze Wakad"
+"Compare Ambegaon Budruk and Aundh"
+"Show price growth for Akurdi"
+API Endpoints
+POST /api/upload/ - Upload Excel file
+POST /api/analyze/ - Analyze query
+License
+MIT License
+
+Author
+Sigmavalue Full Stack Developer Assignment
